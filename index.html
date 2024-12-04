@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Gyanodaya English School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            height: 50px;
+            margin-left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .logo img{
+            height:100%;
+            width: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FE70DC;
+            background-color: rgb(222, 222, 222);
+            border-radius: 5px;
+        }
+
+
+       
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FE70DC;
+            text-align: center;
+            margin-top: 60px;
+            animation: changeBackground 20s infinite ease-in-out;
+            animation-delay: 0ms;
+            background-size: cover;
+            background-position: center;
+        } 
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-right: 20rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: bolder;
+            margin-right: 20rem;
+            font-family: fairwater script;
+        }
+
+        .hero p2 {
+            font-size: 1.2rem;
+            color:rgb(255, 255, 255);
+            text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero button {
+            font-size: 1.3rem;
+            font-weight: bolder;
+            background-color: rgb(255, 181, 43);
+            border-radius: 10px;
+            font-family: 'Courier New', Courier,;
+             color: orangered; 
+            margin-right: 20rem;   
+            text-decoration: none;  
+        }
+
+        .hero button:hover{
+            color: rgb(17, 13, 249);
+        
+        }
+        
+        .hero i {
+            font-size: 30px;
+            color: #004080;
+            background-color: #ffffff;
+            border-radius: 25px;
+            margin:0 20rem 7rem 0;
+        }
+        
+         @keyframes changeBackground {
+            0% {
+                background-image: url('C:\\Users\\sathi\\Downloads\\for gyanodaya page.jpg');
+            }
+            20% {
+                background-image: url('C:\\Users\\sathi\\Downloads\\381497327_785867183549609_2570678501626111860_n.jpg');
+            }
+            40% {
+                background-image: url('C:\\Users\\sathi\\Downloads\\276255545_1343429542797276_2413556677084895520_n.jpg');
+            }
+            60% {
+                background-image: url('C:\\Users\\sathi\\Downloads\\gyan.jpg');
+            }
+            80% {
+                background-image: url('C:\\Users\\sathi\\Downloads\\gyanodaya,,.jpg');
+            }
+            100% {
+                background-image: url('C:\\Users\\sathi\\Downloads\\gyanodaya...jpg');
+            }
+         }
+
+        .sidebar {
+            position: absolute;
+            right: 0;
+            top: 60px;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 60px);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: #004080;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li::before {
+            content: '✔️';
+            margin-right: 10px;
+            color: #004080;
+        }
+        
+
+        @media (max-width: 320px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                box-shadow: none;
+            }
+            .fa-facebook{
+             font-size: 60px;
+             color: #004080;
+            }
+           
+        }
+
+        /* .vision {
+            height: 300px;
+            width: 300px;
+            padding: 40px;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 50px auto;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+            opacity: 0;
+        }
+
+        .vision h2 {
+            font-size: 2.5rem;
+            color: #004080;
+            margin-bottom: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .vision p {
+            font-size: 1.2rem;
+            color: #333333;
+    
+        }*/
+        .video-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .video-section h1 {
+            font-size: 2.5rem;
+            color: #004080;
+            margin-bottom: 20px;
+        }
+
+        .video-section video {
+            width: 30%;
+            margin: 10px;
+            border: 2px solid #004080;
+            border-radius: 10px;
+        }
+
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feedback-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.feedback-section h2 {
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feedback-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.feedback-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.feedback-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    font-style: italic;
+}
+
+.feedback-card h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feedback-card .category {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+        /* Enroll Now Section */
+        .enroll-now {
+            height: 50vh;
+            background: url("D:\pexels-pixabay-267885.jpg") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            background-size: cover;
+            background-size: contain;
+           
+        
+        }
+
+        .enroll-now h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .enroll-now:hover h1 {
+            transform: scale(1.1);
+            color: #FE70DC;
+        }
+
+        .enroll-now button {
+            background-color: #FE70DC;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .enroll-now button:hover {
+            background-color: #004080;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .footer-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-header img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        footer .footer-header h3 {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 2.5rem;
+            color: #0562c0bc;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        footer h4 {
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin: 5px 0;
+        }
+
+        footer ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .contact-us ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        footer .contact-us ul li img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        footer .map {
+            width: 300px;
+            height: 200px;
+            background: url('map-placeholder.png') center/cover no-repeat;
+            border: 1px solid #444;
+            border-radius: 8px;
+        }
+
+        footer .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer .social-icons img {
+            width: 25px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        footer .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="D:\\att.IsENyCbACvruWiSMUlbjtzI-m6HokQ0iAzmt6hEDbZA__4_-removebg-preview.png" alt="Shree Gyanodaya Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="its web.html">Home</a></li>
+                <li><a href="its gallery.html">Gallery</a></li>
+                <li><a href="its teachers.html">Teachers</a></li>
+                <li><a href="its programme.html">Programs</a></li>
+                <li><a href="its admission.html">Apply for admissions</a></li>
+                <li><a href="news and events.html">News and Events</a></li>
+                <li><a href="its about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="hero">
+        <div>
+            <h1>Welcome <br>to<br> Shree Gyanodaya English School</h1>
+            <p>Empowering minds, igniting futures</p>
+            <button><a href="its admission.html">Apply for admission</a></button><br><br>
+            <u><p2>Visit us on</p2></u> 
+            <a href="https://www.facebook.com/profile.php?id=100063790039958"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <h2>Important Guidelines for Parents</h2>
+        <ul>
+            <li>Homework check: See if the kids have completed their homework.</li>
+            <li>Educational content: Check if there are copies, pencils, dotpens, etc.</li>
+            <li>Cleaning out school uniform: Ensure the school uniform is neat and fits well.</li>
+            <li>Personal cleaning: Focus on cleaning nails, hair, hands, and feet.</li>
+            <li>Homework together: Get homework done by sitting with the children after school.</li>
+            <li>Activities all day: Ask about school activities.</li>
+            <li>Peaceful Environment: Avoid fighting at home in front of children as home is their first school.</li>
+            <li>Use of decent language: Family members should not use bad words in front of children.</li>
+            <li>Teaching love and respect: Teach the younger ones to love and respect the elders.</li>
+            <li>Felicitation to guests: Teach children to respect guests who come home.</li>
+            <li>Self-reliance: Teach children to wash their own clothes and dishes.</li>
+            <li>Agricultural work: Engage in farming work during holidays.</li>
+            <li>Conversation with School: Understand children's progress by visiting school or contacting the principal or class teacher weekly.</li>
+        </ul>
+        <p><b>These things play an important role in the educational and personal development of children. Thank you.</b></p>
+    </aside>
+    
+    <!-- <section class="vision">
+        <div>
+         <div> <h2>Our Vision</h2></div>  
+            <p>At Shree Gyanodaya English School, we envision a world where every student is empowered with knowledge, skills, and values to lead and innovate. Our mission is to nurture critical thinkers, compassionate leaders, and lifelong learners who contribute positively to society.</p>
+        </div>
+    </section>
+
+    <section class="vision">
+        <div>
+            <p>To create a nurturing educational environment where students are inspired to achieve academic excellence, develop strong moral character, and become lifelong learners prepared to succeed in a global society.</p>
+        </div>
+    </section> -->
+
+    <section class="video-section">
+         <h1><b>Life at Gyanodaya School</b></h1>
+        <video controls>
+            <source src="" type="video/mp4">
+           
+        </video>
+        <video controls>
+            <source src="" type="video/mp4">
+          
+        </video>
+        <video controls>
+            <source src="" type="video/mp4">
+           
+        </video>
+    </section>
+    <section class="feedback-section">
+        <h2>Message from Students,</h2>
+        <div class="feedback-container">
+            <div class="feedback-card">
+                <img src="student1.jpg" alt="Student Photo">
+                <p>"The school provides a nurturing environment. I love the interactive learning methods!"</p>
+                <h4>Rajesh Thapa</h4>
+                <span class="category">Student</span>
+            </div>
+            <div class="feedback-card">
+                <img src="teacher1.jpg" alt="student Photo">
+                <p>"An amazing place to teach with supportive colleagues and motivated students."</p>
+                <h4>Anita Shrestha</h4>
+                <span class="category">student</span>
+            </div>
+         
+            <div class="feedback-card">
+                <img src="student2.jpg" alt="Student Photo">
+                <p>"The extracurricular activities have enhanced my skills and confidence greatly!"</p>
+                <h4>Sandhya Rai</h4>
+                <span class="category">Student</span>
+            </div>
+           
+        </div>
+    </section>
+    <section class="enroll-now">
+        <h1>Enroll Now!</h1>
+        <button>Apply Here</button>
+    </section>
+    <footer>
+        <!-- Footer Header -->
+        <div class="footer-header">
+            <img src="D:\\att.IsENyCbACvruWiSMUlbjtzI-m6HokQ0iAzmt6hEDbZA__4_-removebg-preview.png" alt="Gyanodaya Logo">
+            <h3>Shree Gyanodaya English School</h3>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="footer-content">
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="its web.html">Home</a></li>
+                    <li><a href="its gallery.html">Gallery</a></li>
+                    <li><a href="its teachers.html">Teachers</a></li>
+                    <li><a href="its programme.html">Programs</a></li>
+                    <li><a href="its admission.html">Admissions</a></li>
+                    <li><a href="news and events.html">News</a></li>
+                    <li><a href="its about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        info@gyanodayaschool.edu.np
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        +977-123-456789
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                         Belbari 7,bahuni morang Nepal
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Map -->
+            <div class="map"></div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100063790039958"><i class="fa-brands fa-facebook"></i> <alt="Facebook">facebook</a>
+            <a href="#"><i class="fa-brands fa-twitter"></i> <alt="Twitter">twitter</a>
+            <a href="#"><i class="fa-brands fa-instagram"></i><alt="Instagram">Instagram</a>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            &copy; 2024 Shree Gyanodaya English School. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
